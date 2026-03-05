@@ -62,7 +62,7 @@ func main() {
 			http.Redirect(w, r, target+r.RequestURI, http.StatusTemporaryRedirect)
 			return
 		}
-
+		fmt.Printf("%s rejected\n", host)
 		http.NotFound(w, r)
 	})
 
